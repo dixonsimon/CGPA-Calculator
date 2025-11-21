@@ -6,7 +6,7 @@
         { name: "Linux and Shell Programming", credits: 3 },
         { name: "Universal Human Values", credits: 2 },
         { name: "Digital Logic and Comp Org", credits: 3 },
-        { name: "Structure Innovation & Design", credits: 3 }
+        { name: "Structure Innovation & Design", credits: 2 }
     ];
 
     const MAX_MARKS = 70;
