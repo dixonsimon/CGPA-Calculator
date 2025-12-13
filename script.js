@@ -1,4 +1,4 @@
-// --- SUBJECT DATA ---
+// --- UPDATED SUBJECT DATA ---
     const subjects = [
         { name: "Web and UI/UX", credits: 3 },
         { name: "Elements of Linear Algebra", credits: 2 },
@@ -6,10 +6,11 @@
         { name: "Linux and Shell Programming", credits: 3 },
         { name: "Universal Human Values", credits: 2 },
         { name: "Digital Logic and Comp Org", credits: 3 },
-        { name: "Structure Innovation & Design", credits: 2 }
+        { name: "Structure Innovation & Design", credits: 3 },
+        { name: "Indian Knowledge System", credits: 2 } // Added new subject
     ];
 
-    const MAX_MARKS = 70;
+    const MAX_MARKS = 100; // Changed from 70 to 100 for all subjects
     let selectedSemester = null;
 
     // --- INITIALIZATION ---
@@ -31,8 +32,8 @@
                     <span class="sub-credit">${sub.credits} Credits</span>
                 </div>
                 <div class="input-group">
-                    <input type="number" id="sub-${index}" min="0" max="70" placeholder="0" oninput="validateInput(this)">
-                    <span class="max-marks">/70</span>
+                    <input type="number" id="sub-${index}" min="0" max="100" placeholder="0" oninput="validateInput(this)">
+                    <span class="max-marks">/100</span>
                 </div>
             `;
             container.appendChild(row);
@@ -192,7 +193,7 @@
         });
 
         if (hasError) {
-            alert("Some marks are invalid (must be between 0 and 70).");
+            alert(`Some marks are invalid (must be between 0 and ${MAX_MARKS}).`);
             return;
         }
 
